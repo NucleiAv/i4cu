@@ -1,0 +1,16 @@
+name = "deepfake-detector"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[ai]
+binding = "AI"
+
+[[durable_objects.bindings]]
+name = "DeepfakeDetectorAgent"
+class_name = "DeepfakeDetectorAgent"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["DeepfakeDetectorAgent"]
+
